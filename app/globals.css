@@ -1,0 +1,320 @@
+:root {
+  --color-bg: #f4f5f7;
+  --color-card: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+
+  --color-red-bg: #fee2e2;
+  --color-red-text: #b91c1c;
+  --color-yellow-bg: #fef3c7;
+  --color-yellow-text: #92400e;
+  --color-green-bg: #dcfce7;
+  --color-green-text: #15803d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ---------- Name picker ---------- */
+
+.name-picker {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.name-picker-subtitle {
+  color: var(--color-muted);
+  font-size: 18px;
+  margin: 8px 0 32px;
+}
+
+.name-picker-list {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.name-picker-button {
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 16px;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.name-picker-button:active {
+  background: var(--color-primary-dark);
+}
+
+/* ---------- Board ---------- */
+
+.board {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.btn-refresh {
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-refresh:disabled {
+  opacity: 0.7;
+}
+
+.whoami {
+  font-size: 15px;
+  color: var(--color-muted);
+  margin: 0 0 20px;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.board-error {
+  background: var(--color-red-bg);
+  color: var(--color-red-text);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+
+.board-loading {
+  color: var(--color-muted);
+  text-align: center;
+  padding: 40px 0;
+}
+
+.member-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- Member card ---------- */
+
+.member-card {
+  background: var(--color-card);
+  border: 2px solid var(--color-border);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.member-card-mine {
+  border-color: var(--color-primary);
+}
+
+.member-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.member-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-red {
+  background: var(--color-red-bg);
+  color: var(--color-red-text);
+}
+
+.status-yellow {
+  background: var(--color-yellow-bg);
+  color: var(--color-yellow-text);
+}
+
+.status-green {
+  background: var(--color-green-bg);
+  color: var(--color-green-text);
+}
+
+.member-task {
+  font-size: 17px;
+  margin: 12px 0 4px;
+  word-break: break-word;
+}
+
+.member-time {
+  font-size: 14px;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.btn-edit {
+  margin-top: 14px;
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 2px solid var(--color-primary);
+  background: #fff;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* ---------- Edit form ---------- */
+
+.edit-form {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-option {
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.status-option-selected {
+  border-color: var(--color-text);
+}
+
+.task-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  border-radius: 12px;
+  border: 2px solid var(--color-border);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  background: var(--color-green-text);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-save:disabled {
+  opacity: 0.7;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 2px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ---------- Larger screens ---------- */
+
+@media (min-width: 640px) {
+  .member-card-top {
+    flex-wrap: nowrap;
+  }
+
+  .status-options {
+    flex-direction: row;
+  }
+
+  .status-option {
+    flex: 1;
+  }
+}
